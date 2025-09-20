@@ -1,0 +1,167 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette for boxing theme with dark background and red accents */
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: #2a2a2a;
+  --card-foreground: #ffffff;
+  --popover: #2a2a2a;
+  --popover-foreground: #ffffff;
+  --primary: #c8102e;
+  --primary-foreground: #ffffff;
+  --secondary: #ffcc00;
+  --secondary-foreground: #1a1a1a;
+  --muted: #4b5563;
+  --muted-foreground: #ffffff;
+  --accent: #ffcc00;
+  --accent-foreground: #1a1a1a;
+  --destructive: #d9534f;
+  --destructive-foreground: #ffffff;
+  --border: #4b5563;
+  --input: #2a2a2a;
+  --ring: #c8102e;
+  --chart-1: #ffcc00;
+  --chart-2: #c8102e;
+  --chart-3: #4b5563;
+  --chart-4: #ffffff;
+  --chart-5: #d9534f;
+  --radius: 0.5rem;
+  --sidebar: #2a2a2a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c8102e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffcc00;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #4b5563;
+  --sidebar-ring: #c8102e;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: #2a2a2a;
+  --card-foreground: #ffffff;
+  --popover: #2a2a2a;
+  --popover-foreground: #ffffff;
+  --primary: #c8102e;
+  --primary-foreground: #ffffff;
+  --secondary: #ffcc00;
+  --secondary-foreground: #1a1a1a;
+  --muted: #4b5563;
+  --muted-foreground: #ffffff;
+  --accent: #ffcc00;
+  --accent-foreground: #1a1a1a;
+  --destructive: #d9534f;
+  --destructive-foreground: #ffffff;
+  --border: #4b5563;
+  --input: #2a2a2a;
+  --ring: #c8102e;
+  --chart-1: #ffcc00;
+  --chart-2: #c8102e;
+  --chart-3: #4b5563;
+  --chart-4: #ffffff;
+  --chart-5: #d9534f;
+  --sidebar: #2a2a2a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c8102e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffcc00;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #4b5563;
+  --sidebar-ring: #c8102e;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  #__next {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Adding scroll animation for footer */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+/* Adding boxing-specific color utilities */
+.text-boxing-red {
+  color: #c8102e;
+}
+
+.bg-boxing-red {
+  background-color: #c8102e;
+}
+
+.border-boxing-red {
+  border-color: #c8102e;
+}
