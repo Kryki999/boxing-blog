@@ -33,7 +33,7 @@ export function TweetFeed() {
                     {tweets.map((tweet) => (
                         <Card
                             key={tweet.id}
-                            className="flex flex-col justify-between bg-card/80 border-none shadow-md hover:scale-[1.02] transition-transform duration-200 overflow-hidden lg:min-h-[400px]"
+                            className="flex flex-col justify-between bg-card/80 border-none shadow-md hover:scale-[1.02] transition-transform duration-200 overflow-hidden min-h-[400px]"
                         >
                             <CardContent className="p-3 lg:p-5 h-full flex flex-col justify-between">
                                 <div className="flex items-center gap-3 mb-3">
